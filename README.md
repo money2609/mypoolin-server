@@ -65,7 +65,17 @@ https://sdk.mypoolin.com/merchants_imps
 
 `curl -X POST https://sdk.mypoolin.com/merchants_upi/request_upi_single -d "beneficiary_virtual_address=8800149537@upi" -d “beneficiary_amount=1” -H "apikey:API_KEY"
 `
-
+**_Sample Response_**
+`{
+    "message": "Transaction Success",
+    "mypoolin_commission": 3,
+    "other_commission": 0,
+    "order_id": "UPII751I1534763586796IU",
+    "sent_amount": 1,
+    "status": "success",
+    "txn_status": "S"
+    "batch_txn_id": "",
+}`
 
 ### UPI Send Async (Single virtual address)
 
@@ -122,6 +132,15 @@ https://sdk.mypoolin.com/merchants_imps
 
 `curl -X POST https://sdk.mypoolin.com/merchants_imps/request_imps_single -H 'apikey: API_KEY' -F 'beneficiary_name=Shobhit Verma' -F 'beneficiary_account_number=8411566856' -F 'beneficiary_ifsc_code=KKBK0005029' -F 'beneficiary_amount=1'`
 
+
+**_Sample Response_**
+`{
+    "message": "success",
+    "mypoolin_commission": 5,
+    "other_commission": 0,
+    "requestNo": "IMPSI751I1534763777602IU",
+    "sent_amount": 1
+}`
 
 ### IMPS Send Async (Single Bank Account)
 
